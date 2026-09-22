@@ -8,6 +8,7 @@
   <meta name="description" content="SisaBaik membantu penyedia menawarkan makanan berlebih agar tetap bernilai, terjangkau, dan tidak terbuang.">
   <title>Beranda | SisaBaik</title>
   <link rel="stylesheet" href="styles.css">
+  <script src=" app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#konten-utama">Lewati ke konten utama</a>
@@ -94,58 +95,48 @@
   <section class="section" id="penawaran-contoh" aria-labelledby="judul-penawaran">
     <div class="container">
       <h2 id="judul-penawaran">Contoh penawaran hari ini</h2>
-      <p class="section-intro">Seluruh data berikut bersifat fiktif untuk keperluan pembelajaran.</p>
-      <div class="offer-grid">
-        <article class="offer-card">
-          <div class="offer-card__visual" aria-hidden="true"></div>
-          <div class="offer-card__content">
-            <span class="badge">Roti dan kue</span>
-            <h3>Paket roti campur</h3>
-            <p class="offer-card__meta">Toko Roti Contoh &middot; <data value="8">8 paket</data></p>
-            <p class="offer-card__price"><del>Rp25.000</del> <strong>Rp10.000</strong></p>
-            <p>Batas pengambilan: <time datetime="2026-09-03T18:00:00+07:00">3 September 2026, 18.00 WIB</time></p>
-          </div>
-        </article>
-        <article class="offer-card">
-          <div class="offer-card__visual" aria-hidden="true"></div>
-          <div class="offer-card__content">
-            <span class="badge">Makanan siap saji</span>
+      <p class=" section intro">Data fiktif dimuat dari JSON untuk latihan JavaScript.</p>
+      <form class="filter-panel"id="filter-form" role="search">
+      <p>
+        <label for="filter-kategori">kategori<label><br>
+        <input id="kata-kunci" name="kata_kunci" type="search" placeholder="contoh: roti">
+      </p>
+      <p>
+        <label for="filter-kategori">kategori<label><br>
+        <select id="filter-kategori" name="kategori">
+          <option value="">Semua kategori</option>
+          <option value="roti-dan-kue">Roti dan kue</option>
+          <option value="makanan-siap-saji">Makanan siap saji</option>
+          <option value="buah-dan-sayur">Buah dan sayur</option>
+        </select>
+      </p>
 
-<h3>Nasi dan lauk harian</h3>
-            <p class="offer-card__meta">Dapur Contoh &middot; <data value="6">6 porsi</data></p>
-            <p class="offer-card__price"><del>Rp30.000</del> <strong>Rp15.000</strong></p>
-            <p>Batas pengambilan: <time datetime="2026-09-03T19:00:00+07:00">3 September 2026, 19.00 WIB</time></p>
-          </div>
-        </article>
-        <article class="offer-card">
-          <div class="offer-card__visual" aria-hidden="true"></div>
-          <div class="offer-card__content">
-            <span class="badge">Buah dan sayur</span>
-            <h3>Paket buah matang</h3>
-            <p class="offer-card__meta">Toko Buah Contoh &middot; <data value="4">4 paket</data></p>
-            <p class="offer-card__price"><strong>Disalurkan tanpa biaya</strong></p>
-            <p>Batas pengambilan: <time datetime="2026-09-03T17:30:00+07:00">3 September 2026, 17.30 WIB</time></p>
-          </div>
-        </article>
-      </div>
+      </form>
+      <p id="status-katalog" class="status-message" role="status" aria-live="polite">Memuat...</p>
+      <div class="offer-grid" id="daftar-penawaran"></div>
+      <aside class="cart-summary" aria-label="judul-ringkasan">
+        <h3 id="judul-ringkasan">Ringkasan pemesanan</h3>
+          <p>span id="jumlah-item">0</p>span> item . total <strong id="total-pesanan">Rp 0</strong></p>
+      </aside>
+    </div>
     </div>
   </section>
 
   <section class="section section-alt" aria-labelledby="judul-keamanan">
     <div class="container">
-      <div class="notice">
+     <div class="notice">
         <h2 id="judul-keamanan">Komitmen keamanan pangan</h2>
-        <p>SisaBaik hanya ditujukan untuk makanan yang masih layak konsumsi. Penyedia bertanggung jawab memberikan informasi kondisi, alergen, penyimpanan, dan batas waktu pengambilan secara jujur.</p>
+        <p>Sisabaik hanay ditunjukkan untuk makanan yang masih layak konsumsi. Penyedia bertanggung jawab memberikan informasi kondisi, alergen, penyimpanan, dan batas waktu pengembalian secara jujur</p>
       </div>
-    </div>
+     </div>
   </section>
-</main>
+  </main>
 
-<footer class="site-footer">
-  <div class="container footer-layout">
-    <p>&copy; 2026 SisaBaik &mdash; Proyek pembelajaran Pengembangan Web.</p>
-    <address><a href="mailto:tim@sisabaik.example">tim@sisabaik.example</a></address>
-  </div>
-</footer>
+  <footer class="site-footer">
+    <div class="container footer-layout">
+      <p>&copy; 2026 sisa baik. Proyek pembelejaran Pengembangan Web.</p>
+     <adress><a href="mailto:tim@sisabaik.example">tim@sisabaik.example</a></adress>
+    </div>
+  </footer>
 </body>
 </html>
