@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SisaBaik API Tester</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+      line-height: 1.5;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    article {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    button {
+      cursor: pointer;
+      padding: 8px 12px;
+    }
+
+    pre {
+      background: #f5f5f5;
+      padding: 12px;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>SisaBaik API Tester</h1>
+
+  <p>
+    Halaman ini membaca data penawaran dari backend Express.
+  </p>
+
+  <section>
+    <h2>Daftar Penawaran</h2>
+    <div id="daftar-penawaran" class="grid"></div>
+  </section>
+
+  <section>
+    <h2>Buat Pesanan</h2>
+    <form id="form-pesanan">
+      <label>
+        Nama Pemesan
+        <input id="nama-pemesan" required minlength="3">
+      </label>
+
+      <button type="submit">Kirim Pesanan</button>
+    </form>
+
+    <pre id="hasil-pesanan"></pre>
+  </section>
+
+  <script src="./app.js"></script>
+</body>
+</html>
